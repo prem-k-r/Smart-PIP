@@ -1,103 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart PIP Extension</title>
+  <title>YouTube Auto PiP</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      width: 250px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      font-family: Arial, sans-serif;
       text-align: center;
+      padding: 20px;
     }
 
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .header img {
-      width: 40px;
-      height: auto;
-      margin-right: 10px;
-    }
-
-    .status {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #666;
-    }
-
-    .status.disabled {
-      color: #ff4d4f;
+    h3 {
+      color: #333;
     }
 
     .toggle-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
-
-    .toggle {
       display: inline-block;
-      width: 50px;
-      height: 25px;
-      background: #ff4d4f;
-      border-radius: 15px;
       position: relative;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      width: 60px;
+      height: 30px;
+      margin: 10px;
     }
 
-    .toggle::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      border-radius: 50%;
+    .toggle-container input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
       position: absolute;
-      top: 50%;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 15px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
       left: 3px;
-      transform: translateY(-50%);
-      transition: all 0.3s ease;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
     }
 
-    .toggle.disabled {
-      background: #ccc;
+    input:checked+.slider {
+      background-color: #4CAF50;
     }
 
-    .toggle.disabled::before {
-      left: 25px;
+    input:checked+.slider:before {
+      transform: translateX(30px);
     }
 
-    .toggle-label {
-      font-size: 16px;
-      color: #333;
-      margin-right: 10px;
+    .status-label {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Disabled state styling for toggles */
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
     }
 
     .github-btn-container {
       display: flex;
       justify-content: center;
-      gap: 10px; /* Adds spacing between buttons */
+      gap: 10px;
+      /* Adds spacing between buttons */
       margin-top: 20px;
     }
 
@@ -128,43 +107,52 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="icon-128.png" alt="Logo">
-    </div>
 
-    <!-- Main toggle to enable/disable extension -->
-    <div class="toggle-container">
-      <div class="toggle-label">Enable Extension</div>
-      <div class="toggle" id="main-toggle"></div>
-    </div>
 
-    <!-- Auto PiP toggle -->
-    <div class="toggle-container">
-      <div class="toggle-label">Auto Picture in Picture</div>
-      <div class="toggle disabled" id="auto-pip-enable-toggle"></div>
-    </div>
 
-    <!-- Close PiP on return toggle -->
-    <div class="toggle-container">
-      <div class="toggle-label">Close on Return</div>
-      <div class="toggle disabled" id="close-pip-return-toggle"></div>
-    </div>
-
-    <!-- GitHub Buttons -->
-    <div class="github-btn-container">
-      <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
-        <img src="git.png" alt="GitHub Logo">
-        GitHub
-      </a>
-      <a href="https://form.jotform.com/250163398628060" target="_blank" class="github-btn">
-        <img src="support.png"  alt="Support Logo">
-        Support
-      </a>
-    </div>
+  <!-- Main Toggle Button to Enable/Disable the Extension -->
+  <div>
+    <label class="toggle-container">
+      <input type="checkbox" id="main-toggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="status-label" id="main-toggle-label">Extension: Off</div>
   </div>
 
+  <!-- Button to enable Auto PiP on Tab Change -->
+  <div>
+    <label class="toggle-container">
+      <input type="checkbox" id="auto-pip-enable-toggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="status-label" id="auto-pip-enable-label">Auto PiP: Off</div>
+  </div>
+
+  <!-- Button to automatically close PiP when returning to YouTube -->
+  <div>
+    <label class="toggle-container">
+      <input type="checkbox" id="close-pip-return-toggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="status-label" id="close-pip-return-label">Close PiP on Return: Off</div>
+  </div>
+
+  <!-- Button to links -->
+  <div class="github-btn-container">
+    <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
+      <img src="git.png" alt="GitHub Logo">
+      GitHub
+    </a>
+
+    <a href="https://form.jotform.com/250163398628060" target="_blank" class="github-btn">
+      <img src="support.png" alt="Support Logo" width="16" height="16">
+      Support
+    </a>
+
+  </div>
   <script src="popup.js"></script>
 </body>
+
 </html>
