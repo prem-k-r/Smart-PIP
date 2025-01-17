@@ -6,7 +6,7 @@
   <title>YouTube PiP Extension</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif; /* Cleaner font */
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -94,23 +94,31 @@
       margin-right: 10px;
     }
 
-    .github-btn {
-      display: inline-block;
-      background-color: #24292f;
-      color: white;
-      font-size: 14px;
-      padding: 12px;
-      border-radius: 5px;
-      text-decoration: none;
-      text-align: center;
-      width: 100%;
-      font-weight: bold;
+    .github-btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Adds spacing between buttons */
       margin-top: 20px;
-      transition: background-color 0.3s ease;
+    }
+
+    .github-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #000000 0%, #000000 100%);
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-weight: bold;
     }
 
     .github-btn:hover {
-      background-color: #333;
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
 
     .github-btn img {
@@ -118,7 +126,6 @@
       margin-right: 8px;
       vertical-align: middle;
     }
-
   </style>
 </head>
 <body>
@@ -145,12 +152,17 @@
       <div class="toggle disabled" id="close-pip-return-toggle"></div>
     </div>
 
-    <!-- GitHub Button -->
-    <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
-      View on GitHub
-    </a>
-
+    <!-- GitHub Buttons -->
+    <div class="github-btn-container">
+      <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
+        <img src="git.png" width="16" height="16" alt="GitHub Logo">
+        GitHub
+      </a>
+      <a href="https://github.com/AnotherRepo" target="_blank" class="github-btn">
+        <img src="git.png" width="16" height="16" alt="GitHub Logo">
+        GitHub Clone
+      </a>
+    </div>
   </div>
 
   <script src="popup.js"></script>
