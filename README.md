@@ -2,7 +2,7 @@
 # Project Smart PIP
 
 <div align="center">
-    <img src="https://github.com/Coderxrohan/Wifi-Deauth-Evil-Twin/blob/main/Images/ESP8266%20Node%20MCU.png" width="250" height="250 " alt="Project Logo">
+    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/Smart%20PIP%20Automation%20Extension.jpg" width="250" height="250 " alt="Project Logo">
 </div>
 
 Smart PIP is a Chrome extension designed to enhance your YouTube viewing experience by automating the activation of Picture-in-Picture (PiP) mode for videos. Picture-in-Picture mode allows videos to play in a floating window that stays on top of other content, enabling you to continue watching videos while multitasking on other tasks or browsing different websites. This extension simplifies the process of managing PiP mode and ensures a smoother, more efficient experience for YouTube users.
