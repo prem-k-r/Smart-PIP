@@ -6,7 +6,7 @@
   <title>YouTube PiP Extension</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif; /* Cleaner font */
       margin: 0;
       padding: 0;
       display: flex;
@@ -94,31 +94,23 @@
       margin-right: 10px;
     }
 
-    .github-btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px; /* Adds spacing between buttons */
-      margin-top: 20px;
-    }
-
     .github-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      background: linear-gradient(135deg, #007FFF 0%, #007FFF 100%);
+      display: inline-block;
+      background-color: #24292f;
       color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
       font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
 
     .github-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      background-color: #333;
     }
 
     .github-btn img {
@@ -126,6 +118,7 @@
       margin-right: 8px;
       vertical-align: middle;
     }
+
   </style>
 </head>
 <body>
@@ -142,27 +135,22 @@
 
     <!-- Auto PiP toggle -->
     <div class="toggle-container">
-      <div class="toggle-label">Auto Picture in Picture</div>
+      <div class="toggle-label">Auto PiP</div>
       <div class="toggle disabled" id="auto-pip-enable-toggle"></div>
     </div>
 
     <!-- Close PiP on return toggle -->
     <div class="toggle-container">
-      <div class="toggle-label">Close on Return</div>
+      <div class="toggle-label">Close PiP on Return</div>
       <div class="toggle disabled" id="close-pip-return-toggle"></div>
     </div>
 
-    <!-- GitHub Buttons -->
-    <div class="github-btn-container">
-      <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
-        <img src="git.png" alt="GitHub Logo">
-        GitHub
-      </a>
-      <a href="https://form.jotform.com/250163398628060" target="_blank" class="github-btn">
-        <img src="feedback.png"  alt="feedback Logo">
-        GitHub
-      </a>
-    </div>
+    <!-- GitHub Button -->
+    <a href="https://github.com/Coderxrohan" target="_blank" class="github-btn">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+      View on GitHub
+    </a>
+
   </div>
 
   <script src="popup.js"></script>
