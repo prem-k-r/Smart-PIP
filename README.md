@@ -2,7 +2,7 @@
 # Smart PIP
 </br>
 <div align="center">
-    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/Images/banner.jpg" width="1000" height="550" alt="Project Logo">
+    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/Images/banner.jpg" width="1000" height="500" alt="Project Logo">
 </div>
 </br>
 </br>
