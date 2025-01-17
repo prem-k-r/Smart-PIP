@@ -1,8 +1,8 @@
 
-# Project Smart PIP
+# Smart PIP
 </br>
 <div align="center">
-    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/Smart%20PIP%20Automation%20Extension.jpg" width="500" height="280" alt="Project Logo">
+    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/Images/banner.jpg" width="500" height="280" alt="Project Logo">
 </div>
 </br>
 </br>
