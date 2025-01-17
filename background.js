@@ -3,16 +3,22 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   for (const tab of tabs) {
     if (tab.url && tab.url.includes("youtube.com/watch")) {
       try {
-        if (tab.id !== activeInfo.tabId) {
-          // Enter PiP mode when switching tabs
-          await chrome.scripting.executeScript({
-            target: { tabId: tab.id },
-            files: ["content.js"]
-          });
-        } else {
-          // Exit PiP mode when returning to YouTube (if enabled)
-          chrome.storage.sync.get("exitPiPEnabled", (data) => {
-            if (data.exitPiPEnabled) {
+        // Get the settings from storage
+        chrome.storage.sync.get(["autoPiPEnabled", "closePiPOnReturnEnabled"], (data) => {
+          const autoPiPEnabled = data.autoPiPEnabled ?? false;
+          const closePiPOnReturnEnabled = data.closePiPOnReturnEnabled ?? false;
+
+          if (tab.id !== activeInfo.tabId) {
+            // Automatically enable PiP when switching to a YouTube tab if enabled
+            if (autoPiPEnabled) {
+              chrome.scripting.executeScript({
+                target: { tabId: tab.id },
+                files: ["content.js"]
+              });
+            }
+          } else {
+            // Close PiP when returning to YouTube if enabled
+            if (closePiPOnReturnEnabled) {
               chrome.scripting.executeScript({
                 target: { tabId: tab.id },
                 func: () => {
@@ -22,8 +28,8 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
                 }
               });
             }
-          });
-        }
+          }
+        });
       } catch (error) {
         console.error("Error executing script:", error);
       }
