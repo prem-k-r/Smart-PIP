@@ -1,13 +1,7 @@
 
 # Project Smart PIP
 
-A brief description of what this project does and who it's for
-
-Welcome to the Java Program Repository! This repository contains a sample Java program to demonstrate the usage of core Java concepts and provide a starting point for building Java applications.
-
-Features
-
-Demonstrates basic Java functionalities.
+Smart PIP is a Chrome extension designed to enhance your YouTube viewing experience by automating the activation of Picture-in-Picture (PiP) mode for videos. Picture-in-Picture mode allows videos to play in a floating window that stays on top of other content, enabling you to continue watching videos while multitasking on other tasks or browsing different websites. This extension simplifies the process of managing PiP mode and ensures a smoother, more efficient experience for YouTube users.
 
 
 ## Features
