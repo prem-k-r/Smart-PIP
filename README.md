@@ -9,14 +9,14 @@
 Smart PIP is a Chrome extension designed to enhance your YouTube viewing experience by automating the activation of Picture-in-Picture (PiP) mode for videos. Picture-in-Picture mode allows videos to play in a floating window that stays on top of other content, enabling you to continue watching videos while multitasking on other tasks or browsing different websites. This extension simplifies the process of managing PiP mode and ensures a smoother, more efficient experience for YouTube users.
 
 
-## Features
+## 🚀 Features
 Currently it supports only automatic turning pip mode in switching tabs. Below features are under construction and coming soon in latest version.
 
 Upcoming / Working Features:
 - Auto PIP close, when returning to youtube.
 - More Buttons for easy control.
 
-## Installation 
+## 💻 Installation 
  
 Auto PiP is not available on the Chrome Web Store, but you can install it manually in Developer Mode by following these steps:
 
@@ -38,12 +38,12 @@ extracted the extension repository.
 - Once loaded, the extension icon should appear in the Chrome toolbar.
 - Select the extension and right click on it, to pin the extension.For easy access.
 - Click on the icon to access the extension settings or to enable/disable features.
-## License
+## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
 This repository is licensed under the MIT License. See the LICENSE file for more details.
-## Support
+## 💪 Support
 
 
 If you encounter any issues or have questions, feel free to open an issue in this repository or contact us at Coderxrohan@gmail.com.
@@ -54,7 +54,7 @@ If you encounter any issues or have questions, feel free to open an issue in thi
 - **Email**: [Mail Me](coderxrohan@gmail.com)
 - **LinkedIn**: [Rohan Satkar](https://www.linkedin.com/in/rohansatkar)
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are always welcome!
 
