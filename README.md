@@ -47,6 +47,13 @@ This repository is licensed under the MIT License. See the LICENSE file for more
 
 
 If you encounter any issues or have questions, feel free to open an issue in this repository or contact us at Coderxrohan@gmail.com.
+
+## 🌐 Connect With Us
+
+- **GitHub**: [Coderxrohan](https://github.com/YourUsername)
+- **Email**: [Mail Me](coderxrohan@gmail.com)
+- **LinkedIn**: [Rohan Satkar](https://www.linkedin.com/in/rohansatkar)
+
 ## Contributing
 
 Contributions are always welcome!
