@@ -7,14 +7,13 @@
 
 // Listen for PiP exit event
 document.addEventListener("exitpictureinpicture", () => {
-  // Reset position and size when PiP window is closed
+  // Reset position when PiP window is closed
   chrome.storage.sync.set({ pipPositionReset: true });
 });
 
-// Check if the reset toggle is enabled
+// Check if reset toggle is enabled and manage PiP position accordingly
 chrome.storage.sync.get("resetPiPPosition", (data) => {
   if (data.resetPiPPosition) {
-    // If reset toggle is on, force the PiP window to open at default position
     document.addEventListener("enterpictureinpicture", () => {
       const pipWindow = document.querySelector("video");
       if (pipWindow) {
