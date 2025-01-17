@@ -18,6 +18,7 @@
       position: relative;
       width: 60px;
       height: 30px;
+      margin-bottom: 10px;
     }
 
     .toggle-container input {
@@ -67,12 +68,23 @@
 </head>
 <body>
   <h3>YouTube Auto PiP</h3>
+  
+  <!-- First Toggle for PiP Auto Exit -->
   <div>
     <label class="toggle-container">
       <input type="checkbox" id="exit-pip-toggle" />
       <span class="slider"></span>
     </label>
-    <div class="status-label" id="toggle-label">Off</div>
+    <div class="status-label" id="exit-pip-toggle-label">Off</div>
+  </div>
+
+  <!-- Second Toggle for Resetting PiP Position and Size -->
+  <div>
+    <label class="toggle-container">
+      <input type="checkbox" id="reset-pip-toggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="status-label" id="reset-pip-toggle-label">Off</div>
   </div>
 
   <script src="popup.js"></script>
