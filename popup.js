@@ -1,43 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mainToggle = document.getElementById("main-toggle");
     const autoPiPToggle = document.getElementById("auto-pip-enable-toggle");
-    const closePiPToggle = document.getElementById("close-pip-return-toggle");
-    
-    const mainStatusLabel = document.getElementById("main-status");
+    const closePiPReturnToggle = document.getElementById("close-pip-return-toggle");
+    const autoPiPLabel = document.getElementById("auto-pip-enable-label");
+    const closePiPLabel = document.getElementById("close-pip-return-label");
+    const mainToggleLabel = document.getElementById("main-toggle-label");
   
-    // Set default state for main toggle
-    chrome.storage.sync.get("extensionEnabled", (data) => {
-      const isExtensionEnabled = data.extensionEnabled ?? false;
-      mainToggle.classList.toggle("disabled", !isExtensionEnabled);
-      mainStatusLabel.textContent = isExtensionEnabled ? "Extension: On" : "Extension: Off";
+    // Retrieve the current states of all settings from chrome.storage
+    chrome.storage.sync.get(["extensionEnabled", "autoPiPEnabled", "closePiPOnReturnEnabled"], (data) => {
+      // Set the states based on saved preferences
+      const extensionEnabled = data.extensionEnabled ?? true; // Default to enabled if undefined
+      const autoPiPEnabled = data.autoPiPEnabled ?? false;
+      const closePiPOnReturnEnabled = data.closePiPOnReturnEnabled ?? false;
+  
+      // Update the main toggle and other toggle buttons' state
+      mainToggle.checked = extensionEnabled;
+      autoPiPToggle.checked = autoPiPEnabled;
+      closePiPReturnToggle.checked = closePiPOnReturnEnabled;
+  
+      // Update the UI labels
+      mainToggleLabel.textContent = extensionEnabled ? "Extension: On" : "Extension: Off";
+      autoPiPLabel.textContent = autoPiPEnabled ? "Auto PiP: On" : "Auto PiP: Off";
+      closePiPLabel.textContent = closePiPOnReturnEnabled ? "Close PiP on Return: On" : "Close PiP on Return: Off";
+  
+      // Enable or disable the other toggles based on the main toggle
+      if (!extensionEnabled) {
+        autoPiPToggle.disabled = true;
+        closePiPReturnToggle.disabled = true;
+        autoPiPToggle.parentElement.classList.add("disabled");
+        closePiPReturnToggle.parentElement.classList.add("disabled");
+      }
     });
   
-    // Toggle main extension
-    mainToggle.addEventListener("click", () => {
-      const isEnabled = !mainToggle.classList.contains("disabled");
+    // Handle main toggle change (enable/disable extension)
+    mainToggle.addEventListener("change", () => {
+      const isEnabled = mainToggle.checked;
       chrome.storage.sync.set({ extensionEnabled: isEnabled });
-      mainToggle.classList.toggle("disabled", isEnabled);
-      mainStatusLabel.textContent = isEnabled ? "Extension: On" : "Extension: Off";
+      mainToggleLabel.textContent = isEnabled ? "Extension: On" : "Extension: Off";
+  
+      // Enable or disable the other toggles based on the main toggle
+      if (isEnabled) {
+        autoPiPToggle.disabled = false;
+        closePiPReturnToggle.disabled = false;
+        autoPiPToggle.parentElement.classList.remove("disabled");
+        closePiPReturnToggle.parentElement.classList.remove("disabled");
+      } else {
+        autoPiPToggle.disabled = true;
+        closePiPReturnToggle.disabled = true;
+        autoPiPToggle.parentElement.classList.add("disabled");
+        closePiPReturnToggle.parentElement.classList.add("disabled");
+      }
     });
   
-    // Set default state for auto PiP and close PiP on return
-    chrome.storage.sync.get(["autoPiPEnabled", "closePiPEnabled"], (data) => {
-      autoPiPToggle.classList.toggle("disabled", !data.autoPiPEnabled);
-      closePiPToggle.classList.toggle("disabled", !data.closePiPEnabled);
-    });
-  
-    // Toggle Auto PiP
-    autoPiPToggle.addEventListener("click", () => {
-      const isEnabled = !autoPiPToggle.classList.contains("disabled");
+    // Handle auto PiP toggle change
+    autoPiPToggle.addEventListener("change", () => {
+      const isEnabled = autoPiPToggle.checked;
       chrome.storage.sync.set({ autoPiPEnabled: isEnabled });
-      autoPiPToggle.classList.toggle("disabled", isEnabled);
+      autoPiPLabel.textContent = isEnabled ? "Auto PiP: On" : "Auto PiP: Off";
     });
   
-    // Toggle Close PiP on return
-    closePiPToggle.addEventListener("click", () => {
-      const isEnabled = !closePiPToggle.classList.contains("disabled");
-      chrome.storage.sync.set({ closePiPEnabled: isEnabled });
-      closePiPToggle.classList.toggle("disabled", isEnabled);
+    // Handle close PiP on return toggle change
+    closePiPReturnToggle.addEventListener("change", () => {
+      const isEnabled = closePiPReturnToggle.checked;
+      chrome.storage.sync.set({ closePiPOnReturnEnabled: isEnabled });
+      closePiPLabel.textContent = isEnabled ? "Close PiP on Return: On" : "Close PiP on Return: Off";
     });
   });
   
