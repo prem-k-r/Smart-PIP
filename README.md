@@ -22,7 +22,7 @@ Upcoming / Working Features:
 Auto PiP is not available on the Chrome Web Store, but you can install it manually in Developer Mode by following these steps:
 
 1. Clone the repository using Git:
-git clone https://github.com/Coderxrohan/Smart-PIP Or download the ZIP file from the repository page on GitHub and extract it.
+'''git clone https://github.com/Coderxrohan/Smart-PIP''' Or download the ZIP file from the repository page on GitHub and extract it.
 
 2. Open Chrome and go to the Extensions page by navigating to chrome://extensions/ in the address bar.
 
