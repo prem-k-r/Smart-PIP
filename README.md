@@ -15,9 +15,9 @@ See the demo or installation.
 https://youtu.be/ojYilPXU_08
 
 ## 🚀 Features
-- Turns on PIP mode automatically,when you exit or switch to another tab from YouTube.
+- Turns on PIP mode automatically, when you exit or switch to another tab from YouTube.
 - Turn off automatically PIP mode, when you return to YouTube agian.
-- Both optins can can be enabled and disabled in settings.
+- Both optins can can be enabled and disabled in extension settings.
 
 Upcoming / Working Features:
 - More Buttons for easy control.
