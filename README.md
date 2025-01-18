@@ -10,10 +10,10 @@ Smart PIP is a Chrome extension designed to enhance your YouTube viewing experie
 
 
 ## 🚀 Features
-Currently it supports only automatic turning pip mode in switching tabs. Below features are under construction and coming soon in latest version.
-
+- Turns on PIP mode automatically,when you exit from YouTube.
+- Turn off automatically PIP mode, when returning to YouTube agian.
+-Both optins can can be enabled adn disabled in settings.
 Upcoming / Working Features:
-- Auto PIP close, when returning to youtube.
 - More Buttons for easy control.
 
 ## 💻 Installation 
