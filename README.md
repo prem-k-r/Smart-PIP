@@ -11,9 +11,7 @@ Smart PIP is a Chrome extension designed to enhance your YouTube viewing experie
 ## Demo
 
 See the demo or installation.
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ojYilPXU_08?si=DPmbNUuII5DBURv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
+
 https://youtu.be/ojYilPXU_08
 
 ## 🚀 Features
