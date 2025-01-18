@@ -39,6 +39,13 @@ extracted the extension repository.
 - Once loaded, the extension icon should appear in the Chrome toolbar.
 - Select the extension and right click on it, to pin the extension.For easy access.
 - Click on the icon to access the extension settings or to enable/disable features.
+
+## Demo
+
+See the demo or installation.
+
+https://youtu.be/ojYilPXU_08
+
 ## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
