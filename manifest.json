@@ -1,33 +1,41 @@
 {
-    "manifest_version": 3,
-    "name": "YouTube Smart PIP",
-    "description": "Automatically enables Picture-in-Picture mode for YouTube videos when switching tabs.",
-    "version": "1.1",
-    "permissions": [
-      "tabs",
-      "activeTab",
-      "scripting",
-      "storage"
-    ],
-    "host_permissions": [
-      "*://*.youtube.com/*"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
+  "manifest_version": 3,
+  "name": "YouTube Smart PIP",
+  "description": "Automatically enables Picture-in-Picture mode for YouTube videos when switching tabs.",
+  "version": "1.1",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
   }
-  
+}
