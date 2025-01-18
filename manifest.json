@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Auto PiP",
+    "name": "YouTube Smart PIP",
     "description": "Automatically enables Picture-in-Picture mode for YouTube videos when switching tabs.",
     "version": "1.1",
     "permissions": [
