@@ -105,12 +105,40 @@
       margin-right: 8px;
       vertical-align: middle;
     }
+
+    /* Animation for the app icon */
+    @keyframes pulse {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.05) rotate(180deg);
+      }
+      100% {
+        transform: scale(1) rotate(360deg);
+      }
+    }
+
+    .app-icon {
+      animation: pulse 4s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .app-icon:hover {
+      transform: scale(1.1);
+      animation-play-state: paused;
+    }
   </style>
 </head>
 
 <body>
-
-
+  <!-- App Icon -->
+  <div style="margin-bottom: 20px;">
+    <a href="mailto:coderxrohan@gmail.com">
+      <img src="icon-128.png" alt="YouTube Smart PIP Icon" width="64" height="64" class="app-icon">
+    </a>
+  </div>
 
   <!-- Main Toggle Button to Enable/Disable the Extension -->
   <div>
@@ -147,7 +175,7 @@
     </a>
 
     <a href="https://form.jotform.com/250163398628060" target="_blank" class="github-btn">
-      <img src="support.png" alt="Support Logo" width="16" height="16">
+      <img src="feedback.png" alt="Support Logo" width="16" height="16">
       Support
     </a>
 
