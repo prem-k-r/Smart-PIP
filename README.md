@@ -16,15 +16,15 @@ https://youtu.be/ojYilPXU_08
 
 ## 🚀 Features
 - Turns on PIP mode automatically, when you exit or switch to another tab from YouTube.
-- Turn off automatically PIP mode, when you return to YouTube agian.
-- Both optins can can be enabled and disabled in extension settings.
+- Turns off PIP mode automatically, when you return to YouTube again.
+- Both options can be enabled and disabled in extension settings.
 
 Upcoming / Working Features:
 - More Buttons for easy control.
 
 ## 💻 Installation 
  
-Auto PiP is not available on the Chrome Web Store, but you can install it manually in Developer Mode by following these steps:
+Smart PiP is not available on the Chrome Web Store, but you can install it manually in Developer Mode by following these steps:
 
 1. Clone the repository using Git:
 ```git clone https://github.com/Coderxrohan/Smart-PIP``` Or download the ZIP file from the repository page on GitHub and extract it.
@@ -36,13 +36,12 @@ Auto PiP is not available on the Chrome Web Store, but you can install it manual
 4. Loading the Extension:
 
 - Click on the Load unpacked button.
-- In the file dialog, select the folder where you cloned or 
-extracted the extension repository.
+- In the file dialog, select the folder where you cloned or extracted the extension repository.
 
 5. Access the Extension:
 
 - Once loaded, the extension icon should appear in the Chrome toolbar.
-- Select the extension and right click on it, to pin the extension.For easy access.
+- Select the extension and right-click on it to pin it for easy access.
 - Click on the icon to access the extension settings or to enable/disable features.
 
 ## 📄 License
@@ -57,7 +56,7 @@ If you encounter any issues or have questions, feel free to open an issue in thi
 
 ## 🌐 Connect With Us
 
-- **GitHub**: [Coderxrohan](https://github.com/YourUsername)
+- **GitHub**: [Coderxrohan](https://github.com/Coderxrohan)
 - **Email**: [Mail Me](coderxrohan@gmail.com)
 - **LinkedIn**: [Rohan Satkar](https://www.linkedin.com/in/rohansatkar)
 
