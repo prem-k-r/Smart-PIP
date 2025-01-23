@@ -79,6 +79,6 @@ If you'd like to contribute to this project:
 
 ## 🫂 Our Contributors
 
-- [White Rawen](https://github.com/white-rawen)
+- [Rutuja](https://github.com/white-rawen)
 - [Shivansh](https://github.com/Thunder-Blaze)
 - [Prem Kumar](https://github.com/prem-k-r)
