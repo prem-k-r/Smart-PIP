@@ -82,3 +82,13 @@ If you'd like to contribute to this project:
 - [Rutuja](https://github.com/white-rawen)
 - [Shivansh](https://github.com/Thunder-Blaze)
 - [Prem Kumar](https://github.com/prem-k-r)
+
+## Contributors
+
+Thanks to all the amazing people who have contributed to this project! ❤️
+
+<a href="https://github.com/Smart-PIP/your-project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=your-repo/your-project" />
+</a>
+
+Contributions of any kind are welcome! 🙌
