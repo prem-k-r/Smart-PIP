@@ -79,16 +79,6 @@ If you'd like to contribute to this project:
 
 ## 🫂 Our Contributors
 
-- [Rutuja](https://github.com/white-rawen)
-- [Shivansh](https://github.com/Thunder-Blaze)
-- [Prem Kumar](https://github.com/prem-k-r)
-
-## Contributors
-
-Thanks to all the amazing people who have contributed to this project! ❤️
-
-<a href="https://github.com/Smart-PIP/your-project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=your-repo/your-project" />
+<a href="https://github.com/coderxrohan/Smart-PIP/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=coderxrohan/Smart-PIP" />
 </a>
-
-Contributions of any kind are welcome! 🙌
