@@ -77,8 +77,8 @@ If you'd like to contribute to this project:
 
 5. Submit a pull request.
 
-## 🫂 Our Contributors
+## 🫂 Contributors
 
-- [Rutuja](https://github.com/white-rawen)
-- [Shivansh](https://github.com/Thunder-Blaze)
-- [Prem Kumar](https://github.com/prem-k-r)
+<a href="https://github.com/localsend/localsend/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=localsend/localsend"  alt="Localsend Contributors"/>
+</a>
