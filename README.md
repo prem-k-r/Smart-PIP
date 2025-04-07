@@ -1,84 +1,36 @@
+# Levisio  
 
-# Smart PIP
-</br>
-<div align="center">
-    <img src="https://github.com/Coderxrohan/Smart-PIP/blob/main/banner.jpg" width="1000" height="400" alt="Project Logo">
-</div>
-</br>
-</br>
-Smart PIP is a Chrome extension designed to enhance your YouTube viewing experience by automating the activation of Picture-in-Picture (PiP) mode for videos. Picture-in-Picture mode allows videos to play in a floating window that stays on top of other content, enabling you to continue watching videos while multitasking on other tasks or browsing different websites. This extension simplifies the process of managing PiP mode and ensures a smoother, more efficient experience for YouTube users.
+**Smart Picture-in-Picture for YouTube that Leviates with You**
 
-## Demo
+Levisio is a lightweight Chrome extension that enables Picture-in-Picture (PiP) mode for any YouTube tab — even if it doesn't natively support PiP. It captures the video stream and displays it in a floating window that stays on top, giving you maximum multitasking power.
 
-See the demo or installation.
+## ✨ Features
 
-https://youtu.be/ojYilPXU_08
+- 🖼️ Enable Picture-in-Picture on any YouTube tab
+- 🚀 Auto PiP
+        Automatically triggers PiP when you switch away from a playing YouTube tab.
+- 🧠 Smart Close (Optional)
+        Automatically exits PiP when you return to the YouTube tab.
 
-## 🚀 Features
-- Turns on PIP mode automatically, when you exit or switch to another tab from YouTube.
-- Turns off PIP mode automatically, when you return to YouTube again.
-- Both options can be enabled and disabled in extension settings.
+## 🧩 How to Use
 
-Upcoming / Working Features:
-- More Buttons for easy control.
+1. Clone or download this repo.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer Mode**.
+4. Click **Load unpacked** and select the `Levisio` folder.
+5. Click the Levisio icon in the toolbar to start PiP on the current tab.
 
-## 💻 Installation 
- 
-Smart PiP is not available on the Chrome Web Store, but you can install it manually in Developer Mode by following these steps:
+## 🛠️ Permissions Used
 
-1. Clone the repository using Git:
-```git clone https://github.com/Coderxrohan/Smart-PIP``` Or download the ZIP file from the repository page on GitHub and extract it.
+- Zero permissions beyond what's necessary
+- `tabs` – to identify and interact with open YouTube tabs
+- `activeTab` – to know which tab you're currently on
+- `scripting` – to inject PiP control scripts
+- `storage` – to remember your toggle preferences
 
-2. Open Chrome and go to the Extensions page by navigating to chrome://extensions/ in the address bar.
+🛡️ Privacy & Performance
+Levisio doesn’t collect any user data. It runs entirely in your browser and only on YouTube domains (youtube.com/*), keeping it focused and efficient.
 
-3. In the top-right corner, toggle Developer mode to ON.
+---
 
-4. Loading the Extension:
-
-- Click on the Load unpacked button.
-- In the file dialog, select the folder where you cloned or extracted the extension repository.
-
-5. Access the Extension:
-
-- Once loaded, the extension icon should appear in the Chrome toolbar.
-- Select the extension and right-click on it to pin it for easy access.
-- Click on the icon to access the extension settings or to enable/disable features.
-
-## 📄 License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-This repository is licensed under the MIT License. See the LICENSE file for more details.
-## 💪 Support
-
-
-If you encounter any issues or have questions, feel free to open an issue in this repository or contact us at Coderxrohan@gmail.com.
-
-## 🌐 Connect With Us
-
-- **GitHub**: [Coderxrohan](https://github.com/Coderxrohan)
-- **Email**: [Mail Me](coderxrohan@gmail.com)
-- **LinkedIn**: [Rohan Satkar](https://www.linkedin.com/in/rohansatkar)
-
-## 🤝 Contributing
-
-Contributions are always welcome!
-
-
-If you'd like to contribute to this project:
-
-1. Fork the repository.
-
-2. Create a new branch: git checkout -b feature-branch-name
-
-3. Commit your changes: git commit -m "Add new feature"
-
-4. Push to the branch: git push origin feature-branch-name
-
-5. Submit a pull request.
-
-## 🫂 Our Contributors
-
-<a href="https://github.com/coderxrohan/Smart-PIP/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=coderxrohan/Smart-PIP" />
-</a>
+With Levisio, YouTube follows you — without getting in your way.
